@@ -76,14 +76,24 @@ WSGI_APPLICATION = 'sandev.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'db66qlb1j4fiv3',                      # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': 'jibpicsmoversq',
+        'PASSWORD': 'ec696b1b522d8aa608708d2492d7754a48c69a48d181cbfeeee84505de755e2c',
+        'URI' :'postgres://jibpicsmoversq:ec696b1b522d8aa608708d2492d7754a48c69a48d181cbfeeee84505de755e2c@ec2-54-157-66-140.compute-1.amazonaws.com:5432/db66qlb1j4fiv3',
+        'HOST': 'ec2-54-157-66-140.compute-1.amazonaws.com',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT' :'5432',                    # Set to empty string for default.
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
